@@ -1,0 +1,10 @@
+02:42:50 **** Incremental Build of configuration Debug for project 5_linker_script_section ****
+make -j12 all 
+arm-none-eabi-size  5_linker_script_section.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1496	     20	   1592	   3108	    c24	5_linker_script_section.elf
+Finished building: default.size.stdout
+ 
+
+02:42:51 Build Finished. 0 errors, 0 warnings. (took 303ms)
+

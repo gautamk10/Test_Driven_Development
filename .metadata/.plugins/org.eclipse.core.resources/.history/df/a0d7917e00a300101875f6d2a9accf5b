@@ -1,0 +1,71 @@
+
+#include "stm32f429xx.h"
+#include "fpu.h"
+#include "uart.h"
+#include <stdio.h>
+#include <timbase.h>
+#include "bsp.h"
+
+
+bool btn_state;
+
+#define APPLICATION_ADDRESS 	0x08008000
+#define EMPTY_MEM				0xFFFFFFFF
+
+
+typedef void(*func_ptr)(void);
+
+void jump_to_default_app(void){
+
+	uint32_t app_start_address;
+	func_ptr jump_to_app;
+
+	printf("BootLoader Started......\n\r");
+	delay(300);
+
+	/* Check if firmware available at the location */
+	if((*(uint32_t*)APPLICATION_ADDRESS) != EMPTY_MEM)
+	{
+		printf("Starting Application..\n\r");
+
+		app_start_address = *(uint32_t*)(APPLICATION_ADDRESS + 4);
+
+		jump_to_app = (func_ptr)app_start_address;
+
+		/* Initialize main Stack Pointer*/
+		__set_MSP(*(uint32_t*)APPLICATION_ADDRESS);
+
+		/* Jump*/
+		jump_to_app();
+	}else{
+		printf("No Application Found at the Location..\n\r ");
+
+	}
+}
+
+
+int main()
+{
+	//Enable FPU
+	fpu_enable();
+
+	//Initialize UART
+	debug_uart_init();
+
+	//Initialize the Timebase
+	timbase_init();
+
+	//Initilize LED
+	led_init();
+
+	//Initilalize Push Button
+	button_init();
+
+	jump_to_default_app();
+
+	while(1)
+	{
+
+	}
+
+}

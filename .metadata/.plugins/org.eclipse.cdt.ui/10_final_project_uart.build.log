@@ -1,0 +1,17 @@
+03:40:27 **** Incremental Build of configuration Debug for project 10_final_project_uart ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"C:/Users/g/Desktop/BootLoader_development/stm32_baremetal_project/10_final_project_uart/chip_headers/CMSIS/Include" -I"C:/Users/g/Desktop/BootLoader_development/stm32_baremetal_project/10_final_project_uart/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "10_final_project_uart.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\g\Desktop\BootLoader_development\stm32_baremetal_project\10_final_project_uart\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="10_final_project_uart.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 10_final_project_uart.elf
+ 
+arm-none-eabi-size  10_final_project_uart.elf 
+arm-none-eabi-objdump -h -S 10_final_project_uart.elf  > "10_final_project_uart.list"
+   text	   data	    bss	    dec	    hex	filename
+   6060	     92	   1916	   8068	   1f84	10_final_project_uart.elf
+Finished building: default.size.stdout
+ 
+Finished building: 10_final_project_uart.list
+ 
+
+03:40:28 Build Finished. 0 errors, 0 warnings. (took 1s.186ms)
+

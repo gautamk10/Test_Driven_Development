@@ -1,0 +1,10 @@
+22:41:27 **** Incremental Build of configuration Debug for project 4_sytem_driver_gpio ****
+make -j12 all 
+arm-none-eabi-size  4_sytem_driver_gpio.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1588	      0	   1576	   3164	    c5c	4_sytem_driver_gpio.elf
+Finished building: default.size.stdout
+ 
+
+22:41:27 Build Finished. 0 errors, 0 warnings. (took 304ms)
+

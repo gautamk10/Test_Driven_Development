@@ -1,0 +1,10 @@
+02:50:10 **** Incremental Build of configuration Debug for project 8_bootloader1 ****
+make -j12 all 
+arm-none-eabi-size  8_bootloader1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5836	     92	   1908	   7836	   1e9c	8_bootloader1.elf
+Finished building: default.size.stdout
+ 
+
+02:50:10 Build Finished. 0 errors, 0 warnings. (took 297ms)
+

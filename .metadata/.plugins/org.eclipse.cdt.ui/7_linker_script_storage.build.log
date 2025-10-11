@@ -1,0 +1,10 @@
+02:45:58 **** Incremental Build of configuration Debug for project 7_linker_script_storage ****
+make -j12 all 
+arm-none-eabi-size  7_linker_script_storage.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1408	     30	   1574	   3012	    bc4	7_linker_script_storage.elf
+Finished building: default.size.stdout
+ 
+
+02:45:58 Build Finished. 0 errors, 0 warnings. (took 329ms)
+

@@ -1,0 +1,21 @@
+11:11:09 **** Build of configuration Debug for project 1_systick_fpu ****
+make -j12 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f429zitx.d" -MT"Startup/startup_stm32f429zitx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f429zitx.o" "../Startup/startup_stm32f429zitx.s"
+arm-none-eabi-gcc "../Src/fpu.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"C:/Users/g/Desktop/BootLoader_development/stm32_baremetal_project/1_systick_fpu/chip_headers/CMSIS/Include" -I"C:/Users/g/Desktop/BootLoader_development/stm32_baremetal_project/1_systick_fpu/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/fpu.d" -MT"Src/fpu.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/fpu.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"C:/Users/g/Desktop/BootLoader_development/stm32_baremetal_project/1_systick_fpu/chip_headers/CMSIS/Include" -I"C:/Users/g/Desktop/BootLoader_development/stm32_baremetal_project/1_systick_fpu/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"C:/Users/g/Desktop/BootLoader_development/stm32_baremetal_project/1_systick_fpu/chip_headers/CMSIS/Include" -I"C:/Users/g/Desktop/BootLoader_development/stm32_baremetal_project/1_systick_fpu/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"C:/Users/g/Desktop/BootLoader_development/stm32_baremetal_project/1_systick_fpu/chip_headers/CMSIS/Include" -I"C:/Users/g/Desktop/BootLoader_development/stm32_baremetal_project/1_systick_fpu/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "1_systick_fpu.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\g\Desktop\BootLoader_development\stm32_baremetal_project\1_systick_fpu\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1_systick_fpu.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1_systick_fpu.elf
+ 
+arm-none-eabi-size  1_systick_fpu.elf 
+arm-none-eabi-objdump -h -S 1_systick_fpu.elf  > "1_systick_fpu.list"
+   text	   data	    bss	    dec	    hex	filename
+    796	      0	   1568	   2364	    93c	1_systick_fpu.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1_systick_fpu.list
+ 
+
+11:11:11 Build Finished. 0 errors, 0 warnings. (took 1s.933ms)
+

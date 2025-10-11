@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;4_sytem_driver_gpio/Src/gpio.c&apos; to &apos;bsp.c&apos;" description="Rename resource &apos;gpio.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Src/gpio.c" name="bsp.c" stamp="1759645497690" updateReferences="true"/>
+</session>

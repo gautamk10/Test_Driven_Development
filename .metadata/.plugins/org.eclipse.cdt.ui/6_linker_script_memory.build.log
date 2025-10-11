@@ -1,0 +1,10 @@
+02:45:14 **** Incremental Build of configuration Debug for project 6_linker_script_memory ****
+make -j12 all 
+arm-none-eabi-size  6_linker_script_memory.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1492	     30	   1582	   3104	    c20	6_linker_script_memory.elf
+Finished building: default.size.stdout
+ 
+
+02:45:14 Build Finished. 0 errors, 0 warnings. (took 325ms)
+

@@ -1,0 +1,21 @@
+08:29:56 **** Build of configuration Debug for project 1_FPU_en ****
+make -j12 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f411retx.d" -MT"Startup/startup_stm32f411retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f411retx.o" "../Startup/startup_stm32f411retx.s"
+arm-none-eabi-gcc "../Src/fpu.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"C:/Users/g/Documents/Bootloader_development/stm32_baremetal_project/0_test_launch/chip_headers/CMSIS/Include" -I"C:/Users/g/Documents/Bootloader_development/stm32_baremetal_project/0_test_launch/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/fpu.d" -MT"Src/fpu.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/fpu.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"C:/Users/g/Documents/Bootloader_development/stm32_baremetal_project/0_test_launch/chip_headers/CMSIS/Include" -I"C:/Users/g/Documents/Bootloader_development/stm32_baremetal_project/0_test_launch/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"C:/Users/g/Documents/Bootloader_development/stm32_baremetal_project/0_test_launch/chip_headers/CMSIS/Include" -I"C:/Users/g/Documents/Bootloader_development/stm32_baremetal_project/0_test_launch/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -DSTM32F411xE -c -I../Inc -I"C:/Users/g/Documents/Bootloader_development/stm32_baremetal_project/0_test_launch/chip_headers/CMSIS/Include" -I"C:/Users/g/Documents/Bootloader_development/stm32_baremetal_project/0_test_launch/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "1_FPU_en.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\g\Documents\Bootloader_development\stm32_baremetal_project\1_FPU_en\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1_FPU_en.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1_FPU_en.elf
+ 
+arm-none-eabi-size  1_FPU_en.elf 
+arm-none-eabi-objdump -h -S 1_FPU_en.elf  > "1_FPU_en.list"
+   text	   data	    bss	    dec	    hex	filename
+    836	      0	   1568	   2404	    964	1_FPU_en.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1_FPU_en.list
+ 
+
+08:29:58 Build Finished. 0 errors, 0 warnings. (took 2s.44ms)
+

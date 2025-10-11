@@ -1,0 +1,47 @@
+
+#include "stm32f429xx.h"
+#include "fpu.h"
+#include "uart.h"
+#include <stdio.h>
+#include <timbase.h>
+#include "bsp.h"
+
+
+#define VECT_TAB_BASE_ADDRESS 		FLASH_BASE
+#define VECT_TAB_OFFSET				0x4000
+
+bool btn_state;
+int main()
+{
+	//Enable FPU
+	fpu_enable();
+
+	//Initialize UART
+	debug_uart_init();
+
+	//Initialize the Timebase
+	timbase_init();
+
+	//Initilize LED
+	led_init();
+
+	//Initilalize Push Button
+	button_init();
+
+
+	while(1)
+	{
+		printf("Default APP is running..\n\r");
+		led_on();
+		delay(1);
+		led_off();
+		delay(1);
+
+	}
+
+}
+
+void SystemInit(void)
+{
+	SCB->VTOR = VECT_TAB_BASE_ADDRESS | VECT_TAB_OFFSET ;
+}

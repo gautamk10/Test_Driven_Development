@@ -1,0 +1,4 @@
+1750906956506	Rename resource '1_FPU_en'
+1750906995098	Rename resource '1_system_driver-uart'
+1750907010581	Rename resource '_system_driver-uart'
+1750907132502	Delete resource '2_system_driver-uart/Inc/uart.h'

@@ -1,0 +1,7 @@
+
+#ifndef TIMBASE_H_
+#define TIMBASE_H_
+
+uint32_t get_tick(void);
+
+#endif /* TIMBASE_H_ */
