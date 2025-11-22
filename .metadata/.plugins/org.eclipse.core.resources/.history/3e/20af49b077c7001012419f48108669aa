@@ -1,0 +1,15 @@
+#include "fake_stm32f429xx.h"
+#include "led_pg13.h"
+
+#define GPIOGEN			(1U<<6)
+#define LED_PIN_INDEX  	13u
+#define LED_PIN_MASK  (1u << LED_PIN_INDEX)
+
+#define MODE_BITS(pin)  (0x3u << ((pin) * 2u))
+#define MODE_OUT(pin)	(0x1u <<((pin) * 2u))
+#define PUPD_BITS(pin)	(0x33u << ((pin) * 2u))
+#define PUPD_NODE(pin) 	(0x0u << ((pin) * 2u))
+
+void led_init(void){
+	RCC->AHB1ENR |= GPIOGEN;
+}

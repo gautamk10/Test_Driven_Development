@@ -1,5 +1,0 @@
-../Src/timbase.c:20:6:delay	3
-../Src/timbase.c:32:10:get_tick	1
-../Src/timbase.c:41:6:tick_increment	1
-../Src/timbase.c:45:6:timbase_init	1
-../Src/timbase.c:70:6:SysTick_Handler	1

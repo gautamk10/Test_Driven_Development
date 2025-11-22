@@ -1,21 +1,7 @@
-15:12:02 **** Incremental Build of configuration Debug for project 11_final_project_bootloader ****
+13:33:30 **** Incremental Build of configuration Debug for project 8_tdd_gpio_driver ****
 make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429I_DISC1 -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"C:/Users/g/Desktop/BootLoader_development/stm32_baremetal_project/11_final_project_bootloader/chip_headers/CMSIS/Include" -I"C:/Users/g/Desktop/BootLoader_development/stm32_baremetal_project/11_final_project_bootloader/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "11_final_project_bootloader.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\g\Desktop\BootLoader_development\stm32_baremetal_project\11_final_project_bootloader\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="11_final_project_bootloader.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 11_final_project_bootloader.elf
- 
-arm-none-eabi-size  11_final_project_bootloader.elf 
-arm-none-eabi-objdump -h -S 11_final_project_bootloader.elf  > "11_final_project_bootloader.list"
+arm-none-eabi-size  8_tdd_gpio_driver.elf 
    text	   data	    bss	    dec	    hex	filename
-   7280	     92	   1916	   9288	   2448	11_final_project_bootloader.elf
-Finished building: default.size.stdout
- 
-Finished building: 11_final_project_bootloader.list
- 
-15:12:12 **** Incremental Build of configuration Debug for project 11_final_project_bootloader ****
-make -j12 all 
-arm-none-eabi-size  11_final_project_bootloader.elf 
-   text	   data	    bss	    dec	    hex	filename
-   7280	     92	   1916	   9288	   2448	11_final_project_bootloader.elf
+   1744	      0	   1584	   3328	    d00	8_tdd_gpio_driver.elf
 Finished building: default.size.stdout
  

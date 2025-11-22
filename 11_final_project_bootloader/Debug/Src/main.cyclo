@@ -1,5 +1,0 @@
-../Src/main.c:44:13:jump_to_app	2
-../Src/main.c:70:5:main	4
-../Src/main.c:142:13:process_btldr_cmds	3
-../Src/main.c:160:13:uart_callback	4
-../Src/main.c:183:6:USART1_IRQHandler	2

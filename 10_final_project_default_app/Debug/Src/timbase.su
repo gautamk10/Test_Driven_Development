@@ -1,5 +1,0 @@
-../Src/timbase.c:20:6:delay	24	static
-../Src/timbase.c:32:10:get_tick	4	static,ignoring_inline_asm
-../Src/timbase.c:41:6:tick_increment	4	static
-../Src/timbase.c:45:6:timbase_init	4	static,ignoring_inline_asm
-../Src/timbase.c:70:6:SysTick_Handler	8	static

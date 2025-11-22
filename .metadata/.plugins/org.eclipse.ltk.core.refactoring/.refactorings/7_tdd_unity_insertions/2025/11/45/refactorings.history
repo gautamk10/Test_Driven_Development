@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;7_tdd_unity_insertions/tdd/test/test_unity_assertions&apos; to &apos;test_unity_assertions.c&apos;" description="Rename resource &apos;test_unity_assertions&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="tdd/test/test_unity_assertions" name="test_unity_assertions.c" stamp="1762184411313" updateReferences="true"/>
+</session>

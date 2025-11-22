@@ -1,0 +1,29 @@
+#include "fake_stm32f429xx.h"
+#include "led_pg13.h"
+
+#define GPIOGEN			(1U<<6)
+#define LED_PIN_INDEX  	13u
+#define LED_PIN_MASK  (1u << LED_PIN_INDEX)
+
+#define MODE_BITS(pin)  (0x3u << ((pin) * 2u))
+#define MODE_OUT(pin)	(0x1u <<((pin) * 2u))
+#define PUPD_BITS(pin)	(0x33u << ((pin) * 2u))
+#define PUPD_NODE(pin) 	(0x0u << ((pin) * 2u))
+
+void led_init(void){
+
+	RCC->AHB1ENR |= GPIOGEN;
+
+	GPIOG->MODER = ( GPIOG->MODER & ~MODE_BITS(LED_PIN_INDEX))
+					| MODE_OUT(LED_PIN_INDEX); // Set PG 13 as output mode
+
+	GPIOG->OTYPER &= ~LED_PIN_MASK; /* Push Pull*/
+
+	GPIOG->OSPEEDR = (GPIOG->OSPEEDR & ~MODE_BITS(LED_PIN_INDEX))
+					| MODE_OUT(LED_PIN_INDEX); /* Mediun speed*/
+
+	GPIOG->PUPDR	= (GPIOG->PUPDR & ~PUPD_BITS(LED_PIN_INDEX))
+						| PUPD_NONE(LED_PIN_INDEX); /* No Pull up/down*/
+
+	GPIOG->ODR = (LED_PIN_MASK << 16);
+}

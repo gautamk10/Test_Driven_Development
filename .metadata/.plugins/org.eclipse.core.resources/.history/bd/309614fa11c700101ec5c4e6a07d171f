@@ -1,0 +1,26 @@
+#include <string.h>
+#include "unity.h"
+#include "fake_stm32f429xx.h"
+#include "led_pg13.h"
+
+#ifndef BIT
+#define BIT(n) (1U << (n)) // Helper for bit addertion
+
+#endif
+
+void setup(void){
+
+	memset(&RCC_,0, sizeof(RCC_));
+	memset(&GPIO_,0, sizeof(GPIO_));
+
+}
+
+void teardown(void){
+
+}
+
+void test_led_init_enables_gpiog_and_configures_pg13_output_start_off(void){
+	led_init();
+	TEST_ASSERT_BIT_HIGH(6,RCC->AHB1ENR);
+
+}
